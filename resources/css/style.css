@@ -65,7 +65,8 @@ header{
 .logo{
     display: flex;
     align-items: center;
-    padding-left: 20%;
+    padding-left: 20px;
+
  
 }
 
@@ -115,7 +116,7 @@ main{
 /* -------- BG IMAGE -------- */
 .stats{
     width: 100%;
-    height: 600px;
+    height: 700px;
     background-size: cover;
     background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url('../img/bg.jpg');
 }
@@ -215,24 +216,95 @@ font-size: 1.1em;
 .country-list{
     position: absolute;
     top: 30px;
-
+    /* justify-content: space-around; */
     width: 400px;
     height: 300px;
     background-color: #111111;
-    opacity: 0.5;
+    opacity: 0.9;
 
     overflow-y: scroll;
 }
 
+.country-list ul{
+  width: 100%;
+}
 
+.country-list ul li{
+ list-style: none;
+ cursor: pointer;
+ padding: 10px;
+ color: #ffff;
+}
+
+.country-list ul li:hover{
+    border-left: 1px solid #ffff;
+   }
+   
 
 
 /* SCROLL BAR */
+/* width */
+.country-list::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .country-list::-webkit-scrollbar-track {
+    background: #111111;
+  }
+  
+  /* Handle */
+  .country-list::-webkit-scrollbar-thumb {
+    background: #f1f1ff;
+  }
+  
+  /* Handle on hover */
+  .country-list::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+  }
+
+
+
 
 /* ---------------------------------------------- */
 /*                    FOOTER                      */
 /* ---------------------------------------------- */
 
+footer{
+    max-width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    background-color: #6a149b;
+    padding-left: 20px;
+    
+}
+
+.footer-container{
+    height: 100%;
+    display: flex;
+    justify-content: none;
+}
+
+.copyright{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.copyright p{
+    color: #ffff;
+}
+
 /* ---------------------------------------------- */
 /*             SCREEN WIDTH < 600px               */
 /* ---------------------------------------------- */
+
+@media screen and(max-width : 600px){
+    .latest-report{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
